@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
             } else {
 
 //                    200; 300; 400; 500; 600; 700; 800; 900; 1000
-                if(userNumber > 99){
+                if(userNumber > 199){
                     result += oneToTen[(userNumber / 100)-1]
                     if(userNumber.toString()[0] == '8' || userNumber.toString()[0] == '9'){
                         result += 'ა'
@@ -70,13 +70,16 @@ class MainActivity : AppCompatActivity() {
                     tvRes.text = result.toString()
                 }
 
+                if(userNumber in 101..199){
+                    result += hundred
+                    tvRes.text = result.toString()
+                }
+
 //                    100
                 if(userNumber == 100){
                     result += hundred
                     result += i
                     tvRes.text = result.toString()
-                }else if(userNumber in 101..199){
-                    result += hundred
                 }
 
                 //
